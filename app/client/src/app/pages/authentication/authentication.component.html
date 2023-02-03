@@ -1,0 +1,116 @@
+<section data-aos="fade-up" data-aos-anchor-placement="top-center">
+  <div class="container">
+    <div class="login-container">
+      <div class="mode-cover login" *ngIf="!loginMode" id="login">
+        <button
+          class="btn btn-secondary"
+          (click)="onChangeMode()"
+          type="button"
+        >
+          I have a user
+        </button>
+      </div>
+
+      <div class="alert" *ngIf="loginMode && errorMessage">
+        <div class="alert-container">
+          <p>{{ errorMessage }}</p>
+          <button class="btn btn-secondary" (click)="onClose()" type="button">
+            Retry
+          </button>
+        </div>
+      </div>
+
+      <h2 class="header-2">Sign in</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="form-control">
+            <label for="login-email">E-Mail</label>
+            <input
+              type="email"
+              id="login-email"
+              class="input-field"
+              formControlName="email"
+            />
+          </div>
+          <div class="form-control">
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              class="input-field"
+              formControlName="password"
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!loginForm.valid"
+          >
+            Sign in</button
+          ><br />
+          <small><a class="forgot-password">Forgot password</a></small>
+        </div>
+      </form>
+    </div>
+    <div class="register-container">
+      <div class="mode-cover register" *ngIf="loginMode" id="register">
+        <button
+          class="btn btn-secondary"
+          (click)="onChangeMode()"
+          type="button"
+        >
+          I'm new here
+        </button>
+      </div>
+
+      <div class="alert" *ngIf="!loginMode && errorMessage">
+        <div class="alert-container">
+          <p>{{ errorMessage }}</p>
+          <button class="btn btn-secondary" (click)="onClose()" type="button">
+            Retry
+          </button>
+        </div>
+      </div>
+
+      <h2 class="header-2">Sign up</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="input-field"
+              formControlName="name"
+            />
+          </div>
+          <div class="form-control">
+            <label for="email">E-Mail</label>
+            <input
+              type="email"
+              id="email"
+              class="input-field"
+              formControlName="email"
+            />
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="input-field"
+              formControlName="password"
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!registerForm.valid"
+          >
+            Sign up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

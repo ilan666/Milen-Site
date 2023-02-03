@@ -1,0 +1,50 @@
+@import "../../../styles.scss";
+
+.sidebar {
+  width: 20%;
+  height: 100%;
+  background-color: $grey-color;
+  padding: 2rem;
+  text-align: center;
+}
+
+.action-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.active {
+  color: $secondary-Color !important;
+}
+
+.action {
+  margin-bottom: 2rem;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+.header-3 {
+  color: $secondary-Color;
+  border-bottom: 1px solid $secondary-Color;
+}
+
+a {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $secondary-Color;
+  }
+}
+
+.admin-section {
+  height: calc(100vh - 6.4rem);
+  margin: 0;
+  display: flex;
+}
+
+.content {
+  width: 100%;
+}

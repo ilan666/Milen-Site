@@ -1,0 +1,119 @@
+@import "../../../styles.scss";
+
+.navbar {
+  padding: 0 3.2rem;
+  background-color: #bf8c4e;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-container {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  padding: 2.2rem 1.6rem;
+  display: block;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color: $secondary-Color, $amount: 8);
+  }
+}
+
+.active {
+  background-color: darken($color: $secondary-Color, $amount: 8);
+  text-decoration: none;
+  color: $primary-Color;
+}
+
+.navbar-group {
+  display: flex;
+  align-items: center;
+}
+
+.burger-icon {
+  height: 32px;
+  width: 32px;
+  margin-right: 1rem;
+}
+
+.nav-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-menu-section {
+  height: calc(100vh - 6.4rem);
+  margin: 0;
+  position: fixed;
+  z-index: 999;
+}
+
+.container {
+  width: 100%;
+  height: 80%;
+  background-color: $grey-color;
+  display: flex;
+}
+
+.nav-list-container {
+  width: 50%;
+  height: 100%;
+  padding: 5rem 10rem;
+}
+
+.nav-image-container {
+  width: 50%;
+  height: 100%;
+
+  .categoryImage {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-2:hover {
+  color: $secondary-Color;
+}
+
+.footer {
+  height: 20%;
+  width: 100%;
+  border-top: 5px solid $primary-Color;
+  background-color: $grey-color;
+}
+
+.auth-active {
+  .user-icon {
+    stroke: $secondary-Color;
+  }
+}
+
+.user-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.logged {
+  fill: $primary-Color;
+}

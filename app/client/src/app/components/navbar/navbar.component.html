@@ -1,0 +1,111 @@
+<nav class="navbar" id="navbar">
+  <ul class="navbar-container">
+    <li class="navbar-group">
+      <ul class="navbar-nav">
+        <li>
+          <button class="nav-menu" (click)="onToggleMenu()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="burger-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </li>
+        <h4 class="navbar-brand header-4">Milen</h4>
+      </ul>
+    </li>
+    <li class="navbar-group">
+      <ul class="navbar-nav">
+        <li>
+          <a class="nav-item" routerLinkActive="active" routerLink="/home"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a class="nav-item" routerLinkActive="active" routerLink="/admin"
+            >Admin</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li class="navbar-group">
+      <ul class="navbar-nav">
+        <li>
+          <a routerLinkActive="auth-active" routerLink="/auth"
+            ><svg
+              *ngIf="!user"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="user-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <svg
+              *ngIf="user"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="user-icon logged"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<section *ngIf="toggleNavMenu" class="nav-menu-section">
+  <div class="container">
+    <div class="nav-list-container">
+      <ul class="nav-list">
+        <li class="category">
+          <a class="header-2">Men</a>
+        </li>
+        <li class="category">
+          <a class="header-2">Women</a>
+        </li>
+        <li class="category">
+          <a class="header-2">Children</a>
+        </li>
+        <li class="category">
+          <a class="header-2">Accessories</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-image-container">
+      <img
+        [src]="'../../../assets/images/accessories-collection-homepage.jpg'"
+        alt=""
+        #categoryImage
+        class="categoryImage"
+      />
+    </div>
+  </div>
+  <div class="footer">
+    <p>Some text here</p>
+  </div>
+</section>

@@ -1,0 +1,175 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&display=swap");
+
+$primary-Color: #1a1a1a;
+$secondary-Color: #bf8c4e;
+$background-Color: #fff9e4;
+$grey-color: #cdcdcd;
+$text-font: "Archivo", "sans-serif";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $text-font;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  background-color: $background-Color;
+  color: $primary-Color;
+  margin-top: 6.4rem;
+}
+
+.header-1 {
+  font-size: 12.8rem;
+}
+
+.header-2 {
+  font-size: 6.4rem;
+}
+
+.header-3 {
+  font-size: 3.6rem;
+}
+
+.header-4 {
+  font-size: 3rem;
+}
+
+.header-5 {
+  font-size: 2.4rem;
+}
+
+.header-6 {
+  font-size: 2.2rem;
+}
+
+.btn {
+  padding: 10px 16px;
+  width: fit-content;
+  height: fit-content;
+  transition: all 0.1s ease-in-out;
+  font-size: 1.6rem;
+  background-color: $background-Color;
+  color: $primary-Color;
+  border: 1px solid $grey-color;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 5px -2px rgb(0 0 0 / 50%);
+  }
+
+  &:active {
+    transform: translateY(0px);
+    box-shadow: none;
+  }
+}
+
+.btn-primary {
+  background-color: $primary-Color;
+  color: $secondary-Color;
+
+  &:hover {
+    background-color: lighten($color: $primary-Color, $amount: 15);
+  }
+
+  &:active {
+    background-color: lighten($color: $primary-Color, $amount: 40);
+  }
+
+  &:disabled {
+    background-color: lighten($color: $primary-Color, $amount: 30);
+    cursor: default;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-Color;
+  color: $primary-Color;
+
+  &:hover {
+    background-color: lighten($color: $secondary-Color, $amount: 15);
+  }
+
+  &:active {
+    background-color: lighten($color: $secondary-Color, $amount: 30);
+  }
+
+  &:disabled {
+    background-color: lighten($color: $secondary-Color, $amount: 30);
+    cursor: default;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 30rem;
+}
+
+a:link,
+a,
+a:visited {
+  text-decoration: none;
+  color: $primary-Color;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  text-align: start;
+}
+
+.input-field {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid $grey-color;
+  width: 100%;
+}
+
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid $grey-color;
+  width: 100%;
+}
+
+.text {
+  transform: scaleX(1.3);
+}
+
+.grid-col-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1, 1fr;
+}
+
+.grid-col-8 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1, 1fr;
+}

@@ -1,0 +1,137 @@
+<section class="hero-section" data-aos="fade-up">
+  <video class="hero-video" loop autoplay>
+    <source [src]="'../../../assets/videos/hero-video.mp4'" type="video/mp4" />
+  </video>
+</section>
+<section
+  class="navigation-section"
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+>
+  <ul class="nav-list">
+    <li class="nav-list-item men" routerLink="/category">
+      <h2 class="header-2">
+        Men
+        <h5 class="header-5">Collection</h5>
+      </h2>
+    </li>
+    <li class="nav-list-item women" routerLink="/category">
+      <h2 class="header-2">
+        women
+        <h5 class="header-5">Collection</h5>
+      </h2>
+    </li>
+    <li class="nav-list-item children" routerLink="/category">
+      <h2 class="header-2">
+        Children
+        <h5 class="header-5">Collection</h5>
+      </h2>
+    </li>
+    <li class="nav-list-item accessories" routerLink="/category">
+      <h2 class="header-2">
+        Accessories
+        <h5 class="header-5">Collection</h5>
+      </h2>
+    </li>
+    <li class="nav-list-item perfume" routerLink="/category">
+      <h2 class="header-2">Perfume</h2>
+    </li>
+  </ul>
+</section>
+<section
+  class="new-products-section padding"
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+>
+  <div class="section-header">
+    <h1 class="header-1">{{ "newest" | uppercase }}</h1>
+    <h1 class="header-1">{{ "products" | uppercase }}</h1>
+  </div>
+  <div class="section-desc grid-col-6">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam.
+      Voluptatibus quas ea, eum ipsa iure ab, nam voluptate fuga obcaecati, et
+      maiores corporis odio libero delectus ut fugiat vel?
+    </p>
+    <button class="btn">
+      {{ "View all" | uppercase }}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="btn-nav-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+        />
+      </svg>
+    </button>
+  </div>
+  <div class="section-content">
+    <div *ngFor="let product of newProducts">
+      <app-card [product]="product"></app-card>
+    </div>
+  </div>
+</section>
+<section
+  class="seasonal-products-section padding"
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+>
+  <div class="section-header">
+    <h1 class="header-1">{{ "Season's" | uppercase }}</h1>
+    <h1 class="header-1">{{ "trending" | uppercase }}</h1>
+  </div>
+  <div class="section-desc grid-col-6">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam.
+      Voluptatibus quas ea, eum ipsa iure ab, nam voluptate fuga obcaecati, et
+      maiores corporis odio libero delectus ut fugiat vel?
+    </p>
+    <button class="btn">
+      {{ "View all" | uppercase }}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="btn-nav-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+        />
+      </svg>
+    </button>
+  </div>
+  <div class="section-content">
+    <div *ngFor="let product of newProducts">
+      <app-card [product]="product"></app-card>
+    </div>
+  </div>
+</section>
+<section class="story-section padding">
+  <h1 class="story-header" data-aos="fade-up">Story of our products</h1>
+  <div class="story-container" data-aos="fade-up">
+    <div class="text-container">
+      <h4 class="header-4 story-header">
+        Our clothes go through a journey of quality design and deep thinking
+        until they reach the customer's home. We bring a story of innovation
+        with innovative, modern young thinking and a contemporary experience.
+      </h4>
+      <p class="story-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+        repellat non molestias quae aliquam reprehenderit excepturi voluptatibus
+        vel cum, sapiente reiciendis ut, qui amet quas? Dolorum id vero
+        doloribus qui.
+      </p>
+    </div>
+    <div class="img-container"></div>
+  </div>
+</section>

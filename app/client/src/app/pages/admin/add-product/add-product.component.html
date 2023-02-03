@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="col-1">
+    <div class="image-placeholder" *ngIf="!imageLink">
+      <p>1140 X 1600</p>
+    </div>
+    <img [src]="imageLink" alt="" class="product-image" *ngIf="imageLink" />
+  </div>
+  <div class="col-2">
+    <h2 class="header-2">ADD PRODUCT</h2>
+    <hr />
+    <form autocomplete="off" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <div class="form-control">
+          <label for="name">Product Name</label>
+          <br />
+          <input
+            type="text"
+            id="name"
+            class="input-field"
+            formControlName="name"
+          />
+        </div>
+        <div class="form-control">
+          <label for="type">Type</label>
+          <br />
+          <select id="type" formControlName="type">
+            <option value="Shirt">T-Shirt</option>
+            <option value="Jacket">Jacket</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Pants">Pants</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="name">Category</label>
+          <br />
+          <select id="type" formControlName="category">
+            <option value="Men">Men</option>
+            <option value="Women">Women</option>
+            <option value="Children">Children</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Perfume">Perfume</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="image">Primary Image URL</label>
+          <br />
+          <input
+            type="text"
+            id="image"
+            class="input-field image-field"
+            formControlName="primaryImage"
+            #primaryImage
+          />
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="imageLink = primaryImage.value"
+          >
+            Upload
+          </button>
+        </div>
+        <div class="form-control">
+          <label for="size">Available Sizes</label>
+          <br />
+          <input
+            type="text"
+            id="size"
+            class="input-field"
+            formControlName="sizes"
+          />
+        </div>
+        <div class="form-control">
+          <label for="colors">Available Colors</label>
+          <br />
+          <input
+            type="text"
+            id="colors"
+            class="input-field"
+            formControlName="colors"
+          />
+        </div>
+        <div class="form-control">
+          <label for="quantity">Quantity</label>
+          <br />
+          <input
+            type="number"
+            id="quantity"
+            class="input-field"
+            formControlName="quantity"
+          />
+        </div>
+        <div class="form-control">
+          <label for="price">Price</label>
+          <br />
+          <input
+            type="number"
+            id="price"
+            class="input-field"
+            formControlName="price"
+          />
+        </div>
+        <div class="form-control">
+          <label for="desc">Product Description</label>
+          <br />
+          <textarea
+            id="desc"
+            class="input-field"
+            rows="6"
+            formControlName="desc"
+          >
+          </textarea>
+        </div>
+        <button
+          class="btn btn-primary"
+          [disabled]="!productForm.valid || !imageLink"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+@import "../../../styles.scss";
+
+.subscription-section {
+  background-color: $primary-Color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-top: 25rem;
+
+  .subscription-holder {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .header-3 {
+    font-size: 4rem;
+    color: $background-Color;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .sub-header {
+    text-align: center;
+  }
+
+  .sub-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+
+    label {
+      color: grey;
+      font-size: 2.2rem;
+    }
+
+    .input-field {
+      padding: 1.8rem;
+      font-size: 2.6rem;
+      text-align: center;
+      color: $background-Color;
+      border: none;
+      background-color: lighten($color: $primary-Color, $amount: 5);
+    }
+
+    .btn-default {
+      width: 100%;
+      padding: 1.8rem;
+      position: relative;
+      font-size: 2rem;
+      font-weight: 700;
+      .mail-icon {
+        position: absolute;
+        width: 26px;
+        top: 50%;
+        left: 34%;
+        transform: translateY(-50%);
+        z-index: 4;
+      }
+    }
+  }
+}
+
+.footer-section {
+  background-color: $primary-Color;
+  margin-bottom: 0;
+
+  .footer-container {
+    width: 100%;
+    display: flex;
+
+    .footer-img {
+      height: 100%;
+      width: 30%;
+      background-image: url("../../../assets/images/story-main.jpg");
+      background-size: cover;
+    }
+  }
+}
